@@ -6,7 +6,20 @@
         xmlns:local="clr-namespace:CWeatherApp"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+    <StackPanel Orientation="Vertical" Background="LightGray">
+        <Label Content="Weather API Application" HorizontalContentAlignment="Center" FontSize="40" Background="Black" Foreground="White"  FontWeight="Bold" />
+        <Label Content="Enter Zip" HorizontalContentAlignment="Center" FontSize="20"/>
+        <TextBox Padding="2" x:Name="txtZipInput" HorizontalContentAlignment="Center" Width="150" Height="20"/>
+        <Button Content="Get Weather" x:Name="btnGetWeather" Click="btnGetWeather_Click" HorizontalContentAlignment="Center" Width="150" Margin="0 10 0 0" FontSize="16" Foreground="White" Background="Black"/>
+
+        <!--WEATHER RESULTS-->
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+            <!--<Image x:Name="imgWeatherIcon" Height="100" Width="100" HorizontalAlignment="Left"/>-->
+            <Label x:Name="lblWeatherTemp" Content="Weather Temp." HorizontalAlignment="Center" FontSize="40"/>
+            <Label x:Name="lblWeatherWinds" Content="Weather Winds" HorizontalAlignment="Center" FontSize="25"/>
+            <Label x:Name="lblWeatherHumidity" Content="Weather Humidity" HorizontalAlignment="Center" FontSize="25"/>
+            <Label x:Name="lblWeatherLocation" Content="Location" HorizontalAlignment="Center" FontSize="25"/>
+            <Label x:Name="lblWeatherDescription" Content="Weather Description" HorizontalAlignment="Center" FontSize="25"/>
+        </StackPanel>
+    </StackPanel>
 </Window>
