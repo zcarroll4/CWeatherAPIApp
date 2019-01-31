@@ -10,10 +10,9 @@ C# Weather App using the OpenWeatherMap.org API Current Weather forecast.
  
  
  ### User Interface Images 
- <p align="center">
  ![UI-01](https://github.com/zcarroll4/CWeatherAPIApp/blob/master/WeatherApplicationUI-01.png)
+ 
  ![UI-02](https://github.com/zcarroll4/CWeatherAPIApp/blob/master/WeatherApplicationUI-02.png)
- </p>
 
  
  
