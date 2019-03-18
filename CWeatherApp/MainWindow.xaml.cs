@@ -36,6 +36,8 @@ namespace CWeatherApp
             InitializeComponent();
             this.Title = "Weather API Application";
             clearAllWeatherLabels();
+            DateTime currentDate = DateTime.Now;
+            currentTime.Content = currentDate.ToString();
         }
         void clearAllWeatherLabels()
         {
@@ -105,6 +107,8 @@ namespace CWeatherApp
             lblWeatherTemp.Content = "";
             lblWeatherWinds.Content = "";
             lblWeatherHumidity.Content = "";
+            this.NavigationService.Refresh();
+
         }
     }
 }
