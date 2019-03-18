@@ -11,6 +11,7 @@
         <Label Content="Enter Zip" HorizontalContentAlignment="Center" FontSize="20"/>
         <TextBox Padding="2" x:Name="txtZipInput" HorizontalContentAlignment="Center" Width="150" Height="20"/>
         <Button Content="Get Weather" x:Name="btnGetWeather" Click="btnGetWeather_Click" HorizontalContentAlignment="Center" Width="150" Margin="0 10 0 0" FontSize="16" Foreground="White" Background="Black"/>
+        <Button Content="Try Again" x:Name="btnTryAgain" Click="btnTryAgain_Click" HorizontalContentAlignment="Center" Width="150" Margin="0 10 0 0" FontSize="16" Foreground="White" Background="Black" Visibility="Hidden"/>
 
         <!--WEATHER RESULTS-->
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center">

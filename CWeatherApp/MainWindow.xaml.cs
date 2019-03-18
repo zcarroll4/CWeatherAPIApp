@@ -58,7 +58,7 @@ namespace CWeatherApp
             {
                 //Call Weater API
                 string zipInput = txtZipInput.Text;
-                getWeatherByZip(zipInput);
+                getWeatherByZip(zipInput);                
             }
             
         }
@@ -81,7 +81,8 @@ namespace CWeatherApp
                     //lblWeatherDescription.Content = "Weather Description - " + string.Format("{0}", outPut.weather.description);
                     lblWeatherWinds.Content = "Wind Speeds - " + string.Format("{0}", outPut.wind.speed) + "mph";
                     lblWeatherLocation.Content = string.Format("{0}", outPut.name);
-
+                    btnGetWeather.Visibility = Visibility.Hidden;
+                    btnTryAgain.Visibility = Visibility.Visible;
                 }
             }
             catch (Exception e)
@@ -91,6 +92,19 @@ namespace CWeatherApp
                 txtZipInput.Text = "";
                 txtZipInput.Focus();
             }          
+        }
+
+        private void btnTryAgain_Click(object sender, RoutedEventArgs e)
+        {
+            btnGetWeather.Visibility = Visibility.Visible;
+            btnTryAgain.Visibility = Visibility.Hidden;
+            txtZipInput.Text = "";
+            txtZipInput.Focus();
+            lblWeatherLocation.Content = "";
+            lblWeatherDescription.Content = "";
+            lblWeatherTemp.Content = "";
+            lblWeatherWinds.Content = "";
+            lblWeatherHumidity.Content = "";
         }
     }
 }
